@@ -1,0 +1,27 @@
+# robots.txt for Anno Interiors
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /pics/
+Allow: /gallery
+Allow: /portfolio
+Allow: /about
+Allow: /contact
+
+# Sitemap location
+Sitemap: https://annointeriors.com/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /draft/
+
+# Allow search engines to crawl images
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+
+# Crawl-delay for better server performance
+Crawl-delay: 10 
