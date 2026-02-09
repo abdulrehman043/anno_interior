@@ -1,0 +1,532 @@
+{
+  "cities": [
+    {
+      "id": "delhi-ncr",
+      "name": "Delhi NCR",
+      "slug": "interior-designer-delhi-ncr",
+      "title": "Interior Designer in Delhi NCR | ANNO Interior",
+      "metaDescription": "Looking for a reliable interior designer in Delhi NCR? ANNO Interior offers residential, modular kitchen & turnkey interiors with transparent execution.",
+      "metaKeywords": "interior designer delhi, interior designer delhi ncr, residential interior design delhi, modular kitchen delhi, turnkey interiors delhi, home interior design delhi",
+      "canonicalUrl": "https://annointeriors.com/interior-designer-delhi-ncr/",
+      "ogImage": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80",
+      "image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "description": "Transform your home in Delhi NCR with ANNO Interior's premium design services. Expert interior designers specializing in residential spaces, modular kitchens, and turnkey interiors. 150+ projects completed with transparent pricing and execution.",
+      "h1": "Interior Designer in Delhi NCR for Residential Homes",
+      "introduction": {
+        "paragraph1": "Designing a home in Delhi is different from other cities. Space constraints, apartment rules, society approvals, and tight timelines are part of the process. ANNO Interior works with these realities every day, offering practical, well-planned interior solutions for homeowners across Delhi and Delhi NCR.",
+        "paragraph2": "We focus on residential interior design that balances aesthetics, functionality, and execution clarity. Whether it's a new flat, an independent house, or a renovation project, our work is structured, transparent, and tailored to how people actually live.",
+        "image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        "imageAlt": "Interior Design in Delhi NCR"
+      },
+      "sections": [
+        {
+          "h2": "About ANNO Interior – Delhi NCR",
+          "subsections": [
+            {
+              "h3": "Our approach to residential interiors",
+              "content": "At ANNO Interior, we understand that every home in Delhi NCR has unique constraints and opportunities. Our approach combines practical space planning with aesthetic design, ensuring that every project is not just visually appealing but also functional for daily living. We work closely with homeowners to understand their lifestyle, budget, and expectations before creating detailed design plans.",
+              "image": "https://images.unsplash.com/photo-1618219740975-d40978bb7378?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+              "imageAlt": "ANNO Interior Design Approach",
+              "imagePosition": "right"
+            }
+          ]
+        },
+        {
+          "h2": "Residential Interior Design Services in Delhi",
+          "intro": "Homes in Delhi come in many forms—from compact apartments to builder floors and villas. Our residential interior services are designed to adapt to each type of home rather than applying a one-size-fits-all style.",
+          "subsections": [
+            {
+              "h3": "Apartment Interior Design",
+              "content": "For flats and builder floors, the focus is on:",
+              "listItems": [
+                "Smart space planning: Maximizing every square foot while maintaining comfort and flow",
+                "Functional storage without clutter: Built-in solutions that keep spaces organized and spacious",
+                "Clean finishes that age well: Materials and designs that remain timeless and durable"
+              ],
+              "contentAfter": "Designs are aligned with society guidelines and practical daily use, not just visual appeal.",
+              "image": "pics/image1.jpeg",
+              "imageAlt": "Apartment Interior Design in Delhi",
+              "imagePosition": "right"
+            },
+            {
+              "h3": "Independent House & Villa Interiors",
+              "content": "For larger homes, we work on:",
+              "listItems": [
+                "Layout zoning for privacy and flow: Creating distinct areas while maintaining connectivity",
+                "Custom furniture planning: Tailored solutions that fit specific spaces and needs",
+                "Balanced lighting and material selection: Creating ambiance while ensuring functionality"
+              ],
+              "contentAfter": "Each design is detailed enough to avoid execution confusion later.",
+              "image": "pics/image35.jpeg",
+              "imageAlt": "Villa Interior Design in Delhi NCR",
+              "imagePosition": "left"
+            },
+            {
+              "h3": "Home Renovation & Interior Upgrades",
+              "content": "Renovation projects in Delhi often require working around occupied homes. We plan phases carefully to reduce disruption and ensure smooth execution. Our team coordinates with existing structures, manages timelines around daily life, and ensures minimal inconvenience during the renovation process."
+            }
+          ]
+        },
+        {
+          "h2": "Modular Kitchen Design for Delhi Apartments",
+          "intro": "The kitchen is one of the most used spaces in a Delhi household. Our modular kitchen designs are planned around cooking habits, storage needs, and apartment layouts commonly found in the region.",
+          "subsections": [
+            {
+              "h3": "Kitchen layouts suited for Delhi homes",
+              "content": "We design kitchens considering:",
+              "listItems": [
+                "L-shaped, U-shaped, and parallel layouts: Optimized for space constraints and workflow",
+                "Easy-to-maintain finishes: Materials that withstand daily use and Indian cooking methods",
+                "Storage depth suited for Indian utensils: Customized solutions for kadai, tawa, and other cookware"
+              ],
+              "image": "pics/image8.jpeg",
+              "imageAlt": "Modular Kitchen Design in Delhi",
+              "imagePosition": "right"
+            },
+            {
+              "h3": "Materials, finishes & storage planning",
+              "content": "Materials, shutters, hardware, and internal accessories are selected based on usage—not trends alone. For many homeowners, this practical approach saves money and avoids future issues. We focus on durability, ease of maintenance, and value for money in every kitchen design."
+            }
+          ]
+        },
+        {
+          "h2": "Turnkey Interior Execution in Delhi NCR",
+          "intro": "ANNO Interior offers turnkey interior solutions for clients who want a single point of responsibility—from design to final handover.",
+          "subsections": [
+            {
+              "h3": "Design to handover process",
+              "content": "Our turnkey execution includes:",
+              "listItems": [
+                "Design finalisation & drawings: Detailed plans and 3D visualizations before execution begins",
+                "Material coordination: Sourcing and managing all materials with quality checks",
+                "On-site execution management: Daily coordination and progress tracking",
+                "Quality checks and timelines: Regular inspections and adherence to project schedules"
+              ]
+            },
+            {
+              "h3": "Site coordination & quality control",
+              "content": "This model works well for Delhi NCR clients who may not be available on-site daily but still want control and clarity. Bolna asaan hai, execute karna mushkil—our systems are built for execution. We maintain transparent communication, provide regular updates, and ensure quality at every stage.",
+              "image": "https://images.unsplash.com/photo-1615529182904-14819c35db37?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+              "imageAlt": "Turnkey Interior Execution in Delhi",
+              "imagePosition": "left"
+            }
+          ]
+        },
+        {
+          "h2": "Interior Design Cost in Delhi – What to Expect",
+          "intro": "Interior design budgets in Delhi vary depending on home size, scope, and material selection. While exact pricing depends on requirements, typical ranges are:",
+          "subsections": [
+            {
+              "h3": "Budget ranges by home type",
+              "content": "These ranges usually include design, modular work, carpentry, and execution. Civil changes, premium finishes, or automation can affect the final cost. We focus on setting realistic budgets early so there are no surprises later.",
+              "listItems": [
+                "2 BHK apartment: ₹5–8 lakhs",
+                "3 BHK apartment: ₹8–14 lakhs",
+                "Independent house / villa: ₹15 lakhs and above"
+              ]
+            }
+          ]
+        },
+        {
+          "h2": "Project Timelines for Delhi Interiors",
+          "intro": "Timelines depend on design finalisation speed, material approvals, and site readiness. On average:",
+          "subsections": [
+            {
+              "h3": "Typical execution duration",
+              "content": "Renovation projects may take slightly longer due to existing conditions. Clear planning at the start helps avoid unnecessary delays. We provide detailed timelines at project initiation and keep clients informed of any changes.",
+              "listItems": [
+                "Design phase: 3–5 weeks",
+                "Execution phase: 8–12 weeks"
+              ]
+            }
+          ]
+        },
+        {
+          "h2": "Why Homeowners in Delhi Trust ANNO Interior",
+          "content": "Clients work with ANNO Interior because we prioritise process over promises. Our approach is built on clarity, documentation, and accountability.",
+          "listItems": [
+            "Practical designs suited to Delhi homes: Solutions that work within space and regulatory constraints",
+            "Clear scope and execution planning: Detailed documentation and transparent processes",
+            "Regular site updates: Consistent communication throughout the project",
+            "Honest communication: Realistic timelines and budgets from the start"
+          ],
+          "contentAfter": "We don't oversell or overcommit. The goal is a smooth experience and a home that works well long after handover."
+        },
+        {
+          "h2": "Areas We Serve Across Delhi NCR",
+          "intro": "ANNO Interior works across major residential zones, including:",
+          "contentAfter": "Projects are handled with local site understanding and coordination. We understand the specific requirements, approvals, and constraints of each area to ensure smooth project execution."
+        }
+      ],
+      "areas": [
+        "Dwarka",
+        "Rohini",
+        "South Delhi",
+        "West Delhi",
+        "Noida",
+        "Gurgaon",
+        "Ghaziabad"
+      ],
+      "galleryImages": [
+        {
+          "src": "pics/image1.jpeg",
+          "alt": "Delhi Apartment Interior Design"
+        },
+        {
+          "src": "pics/image8.jpeg",
+          "alt": "Delhi Kitchen Design"
+        },
+        {
+          "src": "pics/image35.jpeg",
+          "alt": "Delhi Living Room Design"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1618219944342-824e40a13285?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+          "alt": "Delhi Interior Design Project"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+          "alt": "Delhi Home Interior"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+          "alt": "Delhi Residential Interior"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "What is the average interior design cost in Delhi?",
+          "answer": "Interior costs in Delhi typically start from ₹5 lakhs for a 2 BHK and increase based on size, materials, and scope of work."
+        },
+        {
+          "question": "How long does a full interior project take in Delhi NCR?",
+          "answer": "Most residential interior projects take 3–4 months, including design and execution, depending on approvals and material selection."
+        },
+        {
+          "question": "Do you handle both apartments and independent houses?",
+          "answer": "Yes, ANNO Interior designs and executes interiors for apartments, builder floors, villas, and independent houses across Delhi NCR."
+        },
+        {
+          "question": "Is a site visit required before starting the design?",
+          "answer": "Yes, a site visit helps us understand layout, measurements, and practical constraints before design planning begins."
+        },
+        {
+          "question": "Do you execute projects outside Delhi city limits?",
+          "answer": "Yes, we handle interior execution across Delhi NCR, including Noida, Gurgaon, and nearby regions."
+        }
+      ],
+      "pricing": {
+        "2bhk": "₹5–8 lakhs",
+        "3bhk": "₹8–14 lakhs",
+        "villa": "₹15 lakhs and above"
+      },
+      "timeline": {
+        "design": "3–5 weeks",
+        "execution": "8–12 weeks"
+      },
+      "cta": {
+        "heading": "Ready to Start Your Interior Design Project?",
+        "paragraph1": "If you're planning a new home interior or a renovation in Delhi NCR, you can connect with ANNO Interior for a design consultation or site visit.",
+        "paragraph2": "You may also reach out via WhatsApp to discuss your requirements and understand the process before moving forward."
+      },
+      "active": true,
+      "priority": 1
+    },
+    {
+      "id": "noida",
+      "name": "Noida",
+      "slug": "interior-designer-noida",
+      "title": "Interior Designer in Noida | ANNO Interior",
+      "metaDescription": "Looking for a reliable interior designer in Noida? ANNO Interior offers residential, modular kitchen & turnkey interiors with transparent execution.",
+      "metaKeywords": "interior designer noida, interior designer in noida, residential interior design noida, modular kitchen noida, turnkey interiors noida, home interior design noida",
+      "canonicalUrl": "https://annointeriors.com/interior-designer-noida/",
+      "ogImage": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80",
+      "image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "description": "Design your home in Noida with ANNO Interior's practical and well-executed interior solutions. Residential interiors, modular kitchens, and turnkey execution with clarity and transparency.",
+      "h1": "Interior Designer in Noida for Residential Homes",
+      "introduction": {
+        "paragraph1": "Designing a home in Noida comes with its own set of challenges. High-rise apartments, society regulations, handover timelines, and coordination with multiple vendors are common realities. ANNO Interior works with these on-ground conditions every day, delivering well-planned interior solutions for homeowners across Noida.",
+        "paragraph2": "Our focus is on residential interior design that balances design intent, everyday usability, and smooth execution. Whether it's a newly handed-over flat, a villa, or a renovation project, we follow a structured process that avoids confusion and delays.",
+        "image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        "imageAlt": "Interior Design in Noida"
+      },
+      "sections": [
+        {
+          "h2": "About ANNO Interior – Noida",
+          "subsections": [
+            {
+              "h3": "Our approach to residential interiors",
+              "content": "Homes in Noida are largely apartment-driven, with varying layouts across sectors and builders. At ANNO Interior, our approach starts with understanding the flat layout, family needs, and long-term usability. We focus on practical space planning, clear material selection, and execution-ready designs so the project stays smooth from start to finish.",
+              "image": "https://images.unsplash.com/photo-1618219740975-d40978bb7378?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+              "imageAlt": "ANNO Interior Design Approach in Noida",
+              "imagePosition": "right"
+            }
+          ]
+        },
+        {
+          "h2": "Residential Interior Design Services in Noida",
+          "intro": "Residential projects in Noida range from compact 2 BHK apartments to large villas in gated communities. Our services adapt to each home type rather than forcing a fixed design style.",
+          "subsections": [
+            {
+              "h3": "Apartment Interior Design",
+              "content": "For apartments in Noida, the focus is on:",
+              "listItems": [
+                "Efficient space planning: Making the most of carpet area without overcrowding",
+                "Smart storage solutions: Wardrobes, kitchen storage, and utility optimisation",
+                "Durable finishes: Materials that suit apartment living and daily use"
+              ],
+              "contentAfter": "All designs follow society rules and are planned for easy execution.",
+              "image": "pics/image1.jpeg",
+              "imageAlt": "Apartment Interior Design in Noida",
+              "imagePosition": "right"
+            },
+            {
+              "h3": "Independent House & Villa Interiors",
+              "content": "For villas and independent houses, we work on:",
+              "listItems": [
+                "Zoning of spaces: Public, private, and service areas planned clearly",
+                "Custom furniture and carpentry: Designed specifically for the home layout",
+                "Lighting and material coordination: Balanced aesthetics and functionality"
+              ],
+              "contentAfter": "Detailed planning ensures smoother execution and fewer site changes.",
+              "image": "pics/image35.jpeg",
+              "imageAlt": "Villa Interior Design in Noida",
+              "imagePosition": "left"
+            },
+            {
+              "h3": "Home Renovation & Interior Upgrades",
+              "content": "Many homeowners in Noida opt for renovations after possession or resale purchases. We plan renovation work in phases to minimise disruption while ensuring quality and safety."
+            }
+          ]
+        },
+        {
+          "h2": "Modular Kitchen Design for Noida Homes",
+          "intro": "Kitchens in Noida apartments need to be efficient, easy to maintain, and well-organised. Our modular kitchen designs are built around Indian cooking habits and daily usage.",
+          "subsections": [
+            {
+              "h3": "Kitchen layouts suited for Noida apartments",
+              "content": "We design kitchens considering:",
+              "listItems": [
+                "L-shaped, U-shaped, and parallel layouts based on flat size",
+                "Finishes that are easy to clean and maintain",
+                "Storage planning for Indian cookware and groceries"
+              ],
+              "image": "pics/image8.jpeg",
+              "imageAlt": "Modular Kitchen Design in Noida",
+              "imagePosition": "right"
+            },
+            {
+              "h3": "Materials, finishes & storage planning",
+              "content": "Material selection is driven by usage and durability rather than trends. This helps homeowners avoid unnecessary costs and long-term maintenance issues."
+            }
+          ]
+        },
+        {
+          "h2": "Turnkey Interior Execution in Noida",
+          "intro": "ANNO Interior provides turnkey interior execution for homeowners who prefer a single point of responsibility from design to final handover.",
+          "subsections": [
+            {
+              "h3": "Design to handover process",
+              "content": "Our turnkey scope includes:",
+              "listItems": [
+                "Detailed design drawings and 3D views",
+                "Material procurement and coordination",
+                "On-site execution and supervision",
+                "Quality checks and timeline management"
+              ]
+            },
+            {
+              "h3": "Site coordination & quality control",
+              "content": "This approach works especially well for Noida clients who may not be present on-site daily. Bolna easy hai, execution discipline chahiye — our systems are built to handle that.",
+              "image": "https://images.unsplash.com/photo-1615529182904-14819c35db37?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+              "imageAlt": "Turnkey Interior Execution in Noida",
+              "imagePosition": "left"
+            }
+          ]
+        },
+        {
+          "h2": "Interior Design Cost in Noida – What to Expect",
+          "intro": "Interior budgets in Noida depend on flat size, scope of work, and material choices. Typical ranges are:",
+          "subsections": [
+            {
+              "h3": "Budget ranges by home type",
+              "content": "These estimates generally include design, modular work, carpentry, and execution. Civil modifications, premium finishes, or automation can increase the budget.",
+              "listItems": [
+                "2 BHK apartment: ₹5–8 lakhs",
+                "3 BHK apartment: ₹8–14 lakhs",
+                "Villa / independent house: ₹15 lakhs and above"
+              ]
+            }
+          ]
+        },
+        {
+          "h2": "Project Timelines for Noida Interiors",
+          "intro": "Timelines vary based on design finalisation and material approvals. On average:",
+          "subsections": [
+            {
+              "h3": "Typical execution duration",
+              "content": "Renovation projects may require additional time depending on existing conditions. Clear planning at the start helps maintain timelines.",
+              "listItems": [
+                "Design phase: 3–5 weeks",
+                "Execution phase: 8–12 weeks"
+              ]
+            }
+          ]
+        },
+        {
+          "h2": "Why Homeowners in Noida Trust ANNO Interior",
+          "content": "Homeowners choose ANNO Interior for clarity, process discipline, and realistic execution planning.",
+          "listItems": [
+            "Designs suited for Noida apartment layouts",
+            "Clear scope definition and documentation",
+            "Regular site progress updates",
+            "Transparent communication throughout the project"
+          ],
+          "contentAfter": "Our focus is on delivering homes that work well in everyday life, not just at handover."
+        },
+        {
+          "h2": "Areas We Serve in and Around Noida",
+          "intro": "ANNO Interior handles residential interior projects across:",
+          "contentAfter": "We understand local society norms, builder regulations, and execution challenges across these zones."
+        }
+      ],
+      "areas": [
+        "Noida Sector 62",
+        "Noida Sector 75–79",
+        "Noida Extension",
+        "Sector 137",
+        "Sector 150",
+        "Greater Noida",
+        "Greater Noida West"
+      ],
+      "galleryImages": [
+        {
+          "src": "pics/image1.jpeg",
+          "alt": "Noida Apartment Interior Design"
+        },
+        {
+          "src": "pics/image8.jpeg",
+          "alt": "Noida Kitchen Design"
+        },
+        {
+          "src": "pics/image35.jpeg",
+          "alt": "Noida Living Room Design"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1618219944342-824e40a13285?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+          "alt": "Noida Interior Design Project"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+          "alt": "Noida Home Interior"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+          "alt": "Noida Residential Interior"
+        }
+      ],
+      "faqs": [
+        {
+          "question": "What is the average interior design cost in Noida?",
+          "answer": "Interior costs in Noida usually start from ₹5 lakhs for a 2 BHK and vary based on size, materials, and scope of work."
+        },
+        {
+          "question": "How long does an interior project take in Noida?",
+          "answer": "Most residential interior projects in Noida take around 3–4 months, including design and execution."
+        },
+        {
+          "question": "Do you handle high-rise apartment interiors in Noida?",
+          "answer": "Yes, ANNO Interior regularly works on high-rise apartment projects across Noida and Greater Noida."
+        },
+        {
+          "question": "Is a site visit required before design starts?",
+          "answer": "Yes, a site visit is important to understand layout, measurements, and society guidelines before finalising designs."
+        },
+        {
+          "question": "Do you execute projects in Greater Noida as well?",
+          "answer": "Yes, we handle interior design and execution across Noida, Noida Extension, and Greater Noida."
+        }
+      ],
+      "pricing": {
+        "2bhk": "₹5–8 lakhs",
+        "3bhk": "₹8–14 lakhs",
+        "villa": "₹15 lakhs and above"
+      },
+      "timeline": {
+        "design": "3–5 weeks",
+        "execution": "8–12 weeks"
+      },
+      "cta": {
+        "heading": "Planning Your Home Interior in Noida?",
+        "paragraph1": "If you are planning a new interior or renovation in Noida, you can connect with ANNO Interior for a design consultation or site visit.",
+        "paragraph2": "You may also reach out via WhatsApp to understand the process and discuss your requirements before moving ahead."
+      },
+      "active": true,
+      "priority": 2
+    }
+  ],
+  "_template": {
+    "id": "city-id",
+    "name": "City Name",
+    "slug": "interior-designer-city-name",
+    "title": "Interior Designer in City Name | ANNO Interior",
+    "metaDescription": "Meta description for SEO (max 155 characters)",
+    "metaKeywords": "keyword1, keyword2, keyword3",
+    "canonicalUrl": "https://annointeriors.com/interior-designer-city-name/",
+    "ogImage": "URL to OG image",
+    "h1": "Interior Designer in City Name for Residential Homes",
+    "introduction": {
+      "paragraph1": "First paragraph of introduction",
+      "paragraph2": "Second paragraph of introduction",
+      "image": "URL to introduction image",
+      "imageAlt": "Alt text for image"
+    },
+    "sections": [
+      {
+        "h2": "Section Heading",
+        "intro": "Optional intro paragraph for the section",
+        "content": "Optional main content for section",
+        "subsections": [
+          {
+            "h3": "Subsection Heading",
+            "content": "Content text",
+            "listItems": ["List item 1", "List item 2"],
+            "contentAfter": "Content after list",
+            "image": "image-url.jpg",
+            "imageAlt": "Alt text",
+            "imagePosition": "left or right"
+          }
+        ],
+        "listItems": ["Section level list items"],
+        "contentAfter": "Content after section list"
+      }
+    ],
+    "areas": ["Area 1", "Area 2"],
+    "galleryImages": [
+      {"src": "image1.jpg", "alt": "Alt text"},
+      {"src": "image2.jpg", "alt": "Alt text"}
+    ],
+    "faqs": [
+      {
+        "question": "FAQ Question?",
+        "answer": "FAQ Answer"
+      }
+    ],
+    "pricing": {
+      "2bhk": "₹X–Y lakhs",
+      "3bhk": "₹X–Y lakhs",
+      "villa": "₹X lakhs and above"
+    },
+    "timeline": {
+      "design": "X–Y weeks",
+      "execution": "X–Y weeks"
+    },
+    "cta": {
+      "heading": "CTA Heading",
+      "paragraph1": "CTA paragraph 1",
+      "paragraph2": "CTA paragraph 2"
+    },
+    "active": true,
+    "priority": 1
+  }
+}

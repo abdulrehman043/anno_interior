@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+  <!-- Mobile-First: Google indexes mobile version -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <!-- Theme Color for mobile browsers -->
+  <meta name="theme-color" content="#e0a83a" />
   <title>Anno Interiors | Best Interior Designer in Delhi NCR | Top Interior Design Company</title>
   
   <!-- SEO Meta Tags -->
@@ -26,6 +30,18 @@
   
   <!-- Canonical URL -->
   <link rel="canonical" href="https://annointeriors.com" />
+  
+  <!-- Performance: Preconnect to external domains -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://images.unsplash.com">
+  
+  <!-- Performance: Load Google Fonts with display=swap for better performance -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"></noscript>
   
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -67,8 +83,11 @@
     }
   </script>
   
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <!-- Performance: Load non-critical CSS asynchronously -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"></noscript>
   <style>
     /* Global Styles */
     :root {
@@ -93,12 +112,29 @@
       scroll-behavior: smooth;
       font-size: 16px;
     }
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
     body {
       font-family: var(--font-main);
       line-height: 1.8;
       color: var(--primary-color);
       background-color: var(--light-color);
       overflow-x: hidden;
+      /* Mobile: Add padding for sticky CTA buttons */
+      padding-bottom: 80px;
+    }
+    @media (min-width: 992px) {
+      body {
+        padding-bottom: 0;
+      }
     }
     h1, h2, h3, h4 {
       font-family: var(--font-accent);
@@ -107,9 +143,10 @@
       font-weight: 700;
       line-height: 1.3;
     }
-    h1 { font-size: 3.8rem; letter-spacing: -0.5px; }
-    h2 { font-size: 2.8rem; letter-spacing: -0.3px; }
-    h3 { font-size: 1.8rem; }
+    /* Mobile-first base sizes - will be overridden for desktop */
+    h1 { font-size: 2.3rem; letter-spacing: -0.5px; }
+    h2 { font-size: 2rem; letter-spacing: -0.3px; }
+    h3 { font-size: 1.5rem; }
     p {
       margin-bottom: 1.5rem;
       font-size: 1.05rem;
@@ -119,24 +156,29 @@
       color: inherit;
       cursor: pointer;
     }
+    a:focus-visible {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
     img {
       max-width: 100%;
       height: auto;
       display: block;
     }
     .container {
-      width: 90%;
+      width: 95%;
       max-width: 1280px;
       margin: 0 auto;
       padding: 0 1rem;
     }
     .section {
-      padding: 6rem 0;
+      padding: 4rem 0;
       position: relative;
     }
     .section-title {
       text-align: center;
-      margin-bottom: 4rem;
+      margin-bottom: 3rem;
       position: relative;
     }
     .section-title::after {
@@ -157,7 +199,10 @@
     }
     .btn {
       display: inline-block;
-      padding: 0.9rem 2.5rem;
+      /* Mobile-first: Minimum 48x48px touch target for thumbs */
+      min-height: 48px;
+      min-width: 48px;
+      padding: 0.9rem 2rem;
       background-color: var(--accent-color);
       color: white;
       border: none;
@@ -172,6 +217,16 @@
       position: relative;
       overflow: hidden;
       z-index: 1;
+      /* Ensure touch-friendly on mobile */
+      -webkit-tap-highlight-color: rgba(224, 168, 58, 0.3);
+      touch-action: manipulation;
+      /* Accessibility: Focus indicator */
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+    }
+    .btn:focus-visible {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 2px;
     }
     .btn::before {
       content: '';
@@ -213,11 +268,13 @@
       color: white;
     }
     .btn-large {
-      padding: 1.1rem 3rem;
+      min-height: 52px;
+      padding: 1.1rem 2.5rem;
       font-size: 1rem;
     }
     .btn-sm {
-      padding: 0.7rem 1.8rem;
+      min-height: 48px;
+      padding: 0.75rem 1.5rem;
       font-size: 0.85rem;
     }
     .btn-icon {
@@ -240,6 +297,22 @@
     }
     .text-center {
       text-align: center;
+    }
+    
+    /* Accessibility: Skip link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--accent-color);
+      color: white;
+      padding: 8px 16px;
+      text-decoration: none;
+      z-index: 10000;
+      border-radius: 0 0 4px 0;
+    }
+    .skip-link:focus {
+      top: 0;
     }
 
     /* Header & Navigation */
@@ -275,7 +348,7 @@
     }
     .logo span { color: var(--accent-color); }
     .nav-links {
-      display: flex;
+      display: none; /* Hidden on mobile by default, shown via media query on desktop */
       list-style: none;
     }
     .nav-links li { margin-left: 2.5rem; }
@@ -306,34 +379,50 @@
       opacity: 1;
     }
     .hamburger {
-      display: none;
       cursor: pointer;
       font-size: 1.5rem;
-      width: 30px;
-      height: 20px;
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      min-height: 48px;
       position: relative;
       z-index: 1010;
+      padding: 12px;
+      background: transparent;
+      border: none;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+      touch-action: manipulation;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+    }
+    .hamburger:focus-visible {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 2px;
     }
     .hamburger span {
       display: block;
-      width: 100%;
+      width: 24px;
       height: 2px;
       background-color: var(--dark-color);
       position: absolute;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       transition: var(--transition);
     }
-    .hamburger span:nth-child(1) { top: 0; }
-    .hamburger span:nth-child(2) { top: 9px; }
-    .hamburger span:nth-child(3) { top: 18px; }
+    .hamburger span:nth-child(1) { top: 14px; }
+    .hamburger span:nth-child(2) { top: 23px; }
+    .hamburger span:nth-child(3) { top: 32px; }
     .hamburger.active span:nth-child(1) {
-      transform: rotate(45deg);
-      top: 9px;
+      transform: translateX(-50%) rotate(45deg);
+      top: 23px;
     }
     .hamburger.active span:nth-child(2) { opacity: 0; }
     .hamburger.active span:nth-child(3) {
-      transform: rotate(-45deg);
-      top: 9px;
+      transform: translateX(-50%) rotate(-45deg);
+      top: 23px;
     }
 
     /* Hero Section */
@@ -348,6 +437,13 @@
       text-align: center;
       color: white;
       position: relative;
+      /* Performance: Optimize background image loading */
+      background-attachment: scroll;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero {
+        background-attachment: scroll;
+      }
     }
     .hero::before {
       content: '';
@@ -400,6 +496,15 @@
       color: white;
       animation: bounce 2s infinite;
       z-index: 2;
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
+      touch-action: manipulation;
     }
     @keyframes bounce {
       0%, 20%, 50%, 80%, 100% {
@@ -530,7 +635,8 @@
       gap: 0.8rem;
     }
     .filter-btn {
-      padding: 0.5rem 1.2rem;
+      min-height: 48px;
+      padding: 0.6rem 1.5rem;
       background-color: transparent;
       border: 1px solid #ddd;
       border-radius: 30px;
@@ -539,6 +645,8 @@
       font-size: 0.9rem;
       font-weight: 500;
       white-space: nowrap;
+      -webkit-tap-highlight-color: rgba(224, 168, 58, 0.3);
+      touch-action: manipulation;
     }
     .filter-btn.active,
     .filter-btn:hover {
@@ -745,8 +853,10 @@
       margin-top: 1.5rem;
     }
     .social-link {
-      width: 40px;
-      height: 40px;
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      min-height: 48px;
       background-color: rgba(255, 255, 255, 0.1);
       border-radius: 50%;
       display: flex;
@@ -754,6 +864,8 @@
       align-items: center;
       transition: var(--transition);
       color: var(--accent-color);
+      -webkit-tap-highlight-color: rgba(224, 168, 58, 0.3);
+      touch-action: manipulation;
     }
     .social-link:hover {
       background-color: var(--accent-color);
@@ -769,23 +881,56 @@
       opacity: 0.7;
     }
 
-    /* WhatsApp Button */
+    /* Mobile-First: Sticky WhatsApp & Call Buttons */
+    .mobile-cta-buttons {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      gap: 0.5rem;
+      padding: 0.75rem;
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+      z-index: 999;
+      backdrop-filter: blur(10px);
+    }
+    .mobile-cta-buttons .btn {
+      flex: 1;
+      min-height: 52px;
+      padding: 0.9rem 1rem;
+      font-size: 0.9rem;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .mobile-cta-buttons .btn i {
+      font-size: 1.2rem;
+    }
+    
+    /* Desktop: Floating WhatsApp Button */
     .whatsapp-btn {
       position: fixed;
       bottom: 30px;
       left: 30px;
       width: 60px;
       height: 60px;
+      min-width: 60px;
+      min-height: 60px;
       background-color: #25d366;
       color: white;
       border-radius: 50%;
-      display: flex;
+      display: none;
       justify-content: center;
       align-items: center;
       font-size: 1.8rem;
       box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
       transition: var(--transition);
       z-index: 100;
+      -webkit-tap-highlight-color: rgba(37, 211, 102, 0.3);
+      touch-action: manipulation;
     }
     .whatsapp-btn:hover {
       transform: translateY(-8px);
@@ -820,6 +965,33 @@
       visibility: visible;
       left: 70px;
     }
+    
+    /* Call Button (Desktop) */
+    .call-btn {
+      position: fixed;
+      bottom: 30px;
+      left: 100px;
+      width: 60px;
+      height: 60px;
+      min-width: 60px;
+      min-height: 60px;
+      background-color: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      box-shadow: 0 8px 25px rgba(224, 168, 58, 0.35);
+      transition: var(--transition);
+      z-index: 100;
+      -webkit-tap-highlight-color: rgba(224, 168, 58, 0.3);
+      touch-action: manipulation;
+    }
+    .call-btn:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(224, 168, 58, 0.45);
+    }
 
     /* Back to Top Button */
     .back-to-top {
@@ -828,6 +1000,8 @@
       right: 30px;
       width: 50px;
       height: 50px;
+      min-width: 50px;
+      min-height: 50px;
       background-color: var(--accent-color);
       color: white;
       border-radius: 50%;
@@ -840,6 +1014,8 @@
       z-index: 100;
       opacity: 0;
       visibility: hidden;
+      -webkit-tap-highlight-color: rgba(224, 168, 58, 0.3);
+      touch-action: manipulation;
     }
     .back-to-top.active {
       opacity: 1;
@@ -1134,9 +1310,12 @@
       align-items: center;
       gap: 1rem;
       padding: 1rem 2rem;
+      min-height: 48px;
       background: #f8f8f8;
       border-radius: 50px;
       transition: var(--transition);
+      -webkit-tap-highlight-color: rgba(224, 168, 58, 0.2);
+      touch-action: manipulation;
     }
     .contact-method:hover {
       background: #f0f0f0;
@@ -1203,8 +1382,10 @@
       margin-top: 1.5rem;
     }
     .social-link {
-      width: 40px;
-      height: 40px;
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      min-height: 48px;
       background-color: rgba(255, 255, 255, 0.1);
       border-radius: 50%;
       display: flex;
@@ -1212,6 +1393,8 @@
       align-items: center;
       transition: var(--transition);
       color: var(--accent-color);
+      -webkit-tap-highlight-color: rgba(224, 168, 58, 0.3);
+      touch-action: manipulation;
     }
     .social-link:hover {
       background-color: var(--accent-color);
@@ -1226,117 +1409,159 @@
       color: #999;
     }
 
-    /* Responsive Design Updates */
-    @media (max-width: 768px) {
-      .contact-container {
-        padding: 2rem 1.5rem;
-      }
-      .contact-buttons {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      .contact-buttons .btn {
-        width: 100%;
-      }
-      .contact-methods {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      .contact-method {
-        width: 100%;
-        justify-content: center;
-      }
-      .footer-content {
-        flex-direction: column;
-        gap: 2rem;
-      }
-      .footer-column {
-        text-align: center;
-      }
-      .footer-column h3::after {
-        left: 50%;
-        transform: translateX(-50%);
-      }
-      .social-links {
-        justify-content: center;
-      }
-      .footer-links a {
-        justify-content: center;
-      }
+    /* ============================================
+       MOBILE-FIRST RESPONSIVE DESIGN
+       Base styles are for mobile (320px+)
+       Desktop styles added via min-width media queries
+       ============================================ */
+    
+    /* Mobile Base Styles (320px - 767px) - Already defined above, these are explicit overrides */
+    .hero h1 { font-size: 2.3rem; }
+    .hero p { font-size: 1.1rem; }
+    .hero-buttons { flex-direction: column; gap: 1rem; }
+    .hero-buttons .btn { width: 100%; }
+    .about-content { flex-direction: column; }
+    .portfolio-grid, .gallery-grid { grid-template-columns: 1fr; }
+    .cta-heading { font-size: 2rem; }
+    .pricing-container { gap: 2rem; }
+    .pricing-card { min-width: 100%; max-width: 100%; }
+    .testimonial { padding: 2rem; }
+    .stat-item { margin: 1rem 0; min-width: 100%; }
+    .contact-container { padding: 2rem 1.5rem; }
+    .contact-buttons { flex-direction: column; gap: 1rem; }
+    .contact-buttons .btn { width: 100%; }
+    .contact-methods { flex-direction: column; gap: 1rem; }
+    .contact-method { width: 100%; justify-content: center; }
+    .footer-content { flex-direction: column; gap: 2rem; }
+    .footer-column { text-align: center; }
+    .footer-column h3::after { left: 50%; transform: translateX(-50%); }
+    .social-links { justify-content: center; }
+    .footer-links a { justify-content: center; }
+    
+    /* Mobile Navigation */
+    .navbar { position: relative; }
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transform: translateY(-150%);
+      transition: var(--transition);
+      opacity: 0;
+      visibility: hidden;
+      z-index: -1;
     }
-
-    /* Responsive Design */
-    @media (max-width: 992px) {
-      h1 { font-size: 3.2rem; }
-      h2 { font-size: 2.4rem; }
-      .hero h1 { font-size: 3.5rem; margin-top: 200px; }
-      .about-content { flex-direction: column; }
-      .portfolio-grid, .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-      .cta-heading { font-size: 2.5rem; }
+    .nav-links.active {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+      z-index: 1;
     }
-    @media (max-width: 768px) {
+    .nav-links li { margin: 1rem 0; }
+    .hamburger { display: flex; }
+    
+    /* Mobile: Show sticky CTA buttons, hide floating buttons */
+    .mobile-cta-buttons { display: flex; }
+    .whatsapp-btn { display: none; }
+    .call-btn { display: none; }
+    .back-to-top {
+      bottom: 100px; /* Above mobile CTA buttons */
+      right: 20px;
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      min-height: 48px;
+      font-size: 1rem;
+    }
+    
+    /* Tablet Styles (768px+) */
+    @media (min-width: 768px) {
       h1 { font-size: 2.8rem; }
       h2 { font-size: 2.2rem; }
-      .section { padding: 4rem 0; }
-      .navbar { position: relative; }
+      h3 { font-size: 1.6rem; }
+      .hero h1 { font-size: 2.8rem; }
+      .hero p { font-size: 1.15rem; }
+      .hero-buttons { flex-direction: row; gap: 1.5rem; }
+      .hero-buttons .btn { width: auto; }
+      .container { width: 90%; }
+      .section { padding: 5rem 0; }
+      .section-title { margin-bottom: 3.5rem; }
+      .portfolio-grid, .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .cta-heading { font-size: 2.5rem; }
+      .pricing-card { min-width: 280px; max-width: 90%; }
+      .contact-buttons { flex-direction: row; }
+      .contact-buttons .btn { width: auto; }
+      .contact-methods { flex-direction: row; }
+      .contact-method { width: auto; }
+      .footer-content { flex-direction: row; }
+      .footer-column { text-align: left; }
+      .footer-column h3::after { left: 0; transform: none; }
+      .social-links { justify-content: flex-start; }
+      .footer-links a { justify-content: flex-start; }
+      .back-to-top { bottom: 30px; right: 30px; width: 50px; height: 50px; min-width: 50px; min-height: 50px; font-size: 1.2rem; }
+    }
+    
+    /* Desktop Styles (992px+) */
+    @media (min-width: 992px) {
+      h1 { font-size: 3.2rem; letter-spacing: -0.5px; }
+      h2 { font-size: 2.4rem; letter-spacing: -0.3px; }
+      h3 { font-size: 1.8rem; }
+      .hero h1 { font-size: 3.5rem; margin-top: 0; }
+      .hero p { font-size: 1.3rem; }
+      .container { width: 90%; max-width: 1280px; }
+      .section { padding: 6rem 0; }
+      .section-title { margin-bottom: 4rem; }
+      .about-content { flex-direction: row; gap: 4rem; }
+      .portfolio-grid, .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+      .cta-heading { font-size: 3rem; }
+      .pricing-container { gap: 2rem; }
+      .pricing-card { min-width: 300px; max-width: 350px; }
+      .testimonial { padding: 2.5rem; }
+      .stat-item { margin: 1.5rem; min-width: 200px; }
+      .contact-container { padding: 3rem; }
+      
+      /* Desktop: Hide mobile CTA buttons, show floating buttons */
+      .mobile-cta-buttons { display: none; }
+      .whatsapp-btn { display: flex; }
+      .call-btn { display: flex; }
+      .back-to-top { bottom: 30px; right: 30px; width: 50px; height: 50px; min-width: 50px; min-height: 50px; font-size: 1.2rem; }
+      .hamburger { display: none; }
       .nav-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: white;
-        flex-direction: column;
-        align-items: center;
-        padding: 2rem 0;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        transform: translateY(-150%);
-        transition: var(--transition);
-        opacity: 0;
-        visibility: hidden;
-        z-index: -1;
-      }
-      .nav-links.active {
-        transform: translateY(0);
+        position: static;
+        display: flex;
+        flex-direction: row;
         opacity: 1;
         visibility: visible;
+        transform: none;
+        box-shadow: none;
+        padding: 0;
+        background-color: transparent;
         z-index: 1;
+        width: auto;
+        left: auto;
+        top: auto;
       }
-      .nav-links li { margin: 1rem 0; }
-      .hamburger { display: block; }
-      .hero h1 { font-size: 2.8rem; }
-      .hero p { font-size: 1.1rem; }
-      .hero-buttons { flex-direction: column; gap: 1rem; }
-      .cta-heading { font-size: 2rem; }
-      .pricing-container { gap: 3rem; }
-      .pricing-card { min-width: 280px; max-width: 90%; }
+      .nav-links li { margin-left: 2.5rem; margin: 0 0 0 2.5rem; }
     }
-    @media (max-width: 576px) {
-      .container { width: 95%; }
-      h1 { font-size: 2.5rem; }
-      h2 { font-size: 2rem; }
-      .hero h1 { font-size: 2.3rem; }
-      .section-title { margin-bottom: 3rem; }
-      .stat-item { margin: 1rem 0; min-width: 100%; }
-      .testimonial { padding: 2rem; }
-      .portfolio-grid, .gallery-grid { grid-template-columns: 1fr; }
-      .whatsapp-btn {
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
-        bottom: 20px;
-        left: 20px;
-      }
-      .back-to-top {
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
-        bottom: 20px;
-        right: 20px;
-      }
+    
+    /* Large Desktop (1200px+) */
+    @media (min-width: 1200px) {
+      h1 { font-size: 3.8rem; letter-spacing: -0.5px; }
+      h2 { font-size: 2.8rem; letter-spacing: -0.3px; }
+      .hero h1 { font-size: 4.2rem; }
     }
   </style>
 </head>
 <body>
+  <!-- Accessibility: Skip to main content link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
   <!-- Header -->
   <header id="header">
     <nav class="navbar container">
@@ -1349,16 +1574,18 @@
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="city-map.html">Cities</a></li>
       </ul>
-      <div class="hamburger" id="hamburger">
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
     </nav>
   </header>
 
   <!-- Hero Section -->
+  <main id="main-content">
   <section class="hero section" id="home">
     <div class="container hero-content" data-aos="fade-up" data-aos-delay="200">
       <h1>Best Interior Designer in Delhi NCR | Transform Your Space</h1>
@@ -1399,7 +1626,7 @@
           </div>
         </div>
         <div class="about-image" data-aos="fade-left" data-aos-delay="300">
-          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Interior Design">
+          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Interior Design" width="800" height="600" loading="lazy" decoding="async">
         </div>
       </div>
     </div>
@@ -1419,7 +1646,7 @@
       </div>
       <div class="portfolio-grid">
         <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200" data-category="bedroom">
-          <img src="pics/image1.jpeg" alt="Bedroom Design" class="portfolio-img">
+          <img src="pics/image1.jpeg" alt="Bedroom Design" class="portfolio-img" width="350" height="320" loading="lazy" decoding="async">
           <div class="portfolio-overlay">
             <h3>Modern Bedroom</h3>
             <p>Elegant design with a modern touch.</p>
@@ -1427,7 +1654,7 @@
           </div>
         </div>
         <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300" data-category="kitchen">
-          <img src="pics/image8.jpeg" alt="Kitchen Design" class="portfolio-img">
+          <img src="pics/image8.jpeg" alt="Kitchen Design" class="portfolio-img" width="350" height="320" loading="lazy" decoding="async">
           <div class="portfolio-overlay">
             <h3>Modern Kitchen</h3>
             <p>Functional and stylish kitchen space.</p>
@@ -1435,7 +1662,7 @@
           </div>
         </div>
         <div class="portfolio-item" data-aos="fade-up" data-aos-delay="400" data-category="living">
-          <img src="pics/image35.jpeg" alt="Living Room Design" class="portfolio-img">
+          <img src="pics/image35.jpeg" alt="Living Room Design" class="portfolio-img" width="350" height="320" loading="lazy" decoding="async">
           <div class="portfolio-overlay">
             <h3>Contemporary Living Room</h3>
             <p>Spacious and elegant living area.</p>
@@ -1545,22 +1772,22 @@
       <div class="gallery-grid">
         <!-- Initial visible gallery items -->
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
-          <img src="https://images.unsplash.com/photo-1618219944342-824e40a13285?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Gallery Image 1">
+          <img src="https://images.unsplash.com/photo-1618219944342-824e40a13285?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Gallery Image 1" width="700" height="700" loading="lazy" decoding="async">
         </div>
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-          <img src="https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Gallery Image 2">
+          <img src="https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Gallery Image 2" width="700" height="700" loading="lazy" decoding="async">
         </div>
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
-          <img src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Gallery Image 3">
+          <img src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Gallery Image 3" width="700" height="700" loading="lazy" decoding="async">
         </div>
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
-          <img src="https://images.unsplash.com/photo-1618219740975-d40978bb7378?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Gallery Image 4">
+          <img src="https://images.unsplash.com/photo-1618219740975-d40978bb7378?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Gallery Image 4" width="700" height="700" loading="lazy" decoding="async">
         </div>
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-          <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Gallery Image 5">
+          <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Gallery Image 5" width="700" height="700" loading="lazy" decoding="async">
         </div>
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
-          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Gallery Image 6">
+          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Gallery Image 6" width="700" height="700" loading="lazy" decoding="async">
         </div>
       </div>
       <div class="view-more-btn" data-aos="fade-up" data-aos-delay="400">
@@ -1600,7 +1827,7 @@
           <p class="testimonial-text">"Anno Interiors transformed our home into a masterpiece. Their attention to detail is exceptional. The team understood our needs perfectly and delivered beyond our expectations."</p>
           <div class="testimonial-author">
             <div class="author-img">
-              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=80&q=80" alt="Client 1">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=80&q=80" alt="Client 1" width="60" height="60" loading="lazy" decoding="async">
             </div>
             <div>
               <div class="author-name">Rahul Sharma</div>
@@ -1619,7 +1846,7 @@
           <p class="testimonial-text">"The team at Anno Interiors is professional, creative, and delivers on time. They exceeded our expectations in every way and made our 3 BHK apartment look like a luxury home."</p>
           <div class="testimonial-author">
             <div class="author-img">
-              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=80&q=80" alt="Client 2">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=80&q=80" alt="Client 2" width="60" height="60" loading="lazy" decoding="async">
             </div>
             <div>
               <div class="author-name">Priya Malhotra</div>
@@ -1638,7 +1865,7 @@
           <p class="testimonial-text">"Working with Anno Interiors was a breeze. Their design solutions are innovative and practical. We love how they've made our compact 2 BHK feel so spacious and elegant."</p>
           <div class="testimonial-author">
             <div class="author-img">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=80&q=80" alt="Client 3">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=80&q=80" alt="Client 3" width="60" height="60" loading="lazy" decoding="async">
             </div>
             <div>
               <div class="author-name">Amit & Neha Kapoor</div>
@@ -1707,6 +1934,7 @@
             <li><a href="#pricing"><i class="fas fa-angle-right"></i> Pricing</a></li>
             <li><a href="#testimonials"><i class="fas fa-angle-right"></i> Testimonials</a></li>
             <li><a href="#contact"><i class="fas fa-angle-right"></i> Contact</a></li>
+            <li><a href="city-map.html"><i class="fas fa-angle-right"></i> Cities</a></li>
           </ul>
         </div>
         <div class="footer-column">
@@ -1726,20 +1954,46 @@
       </div>
     </div>
   </footer>
+  </main>
 
-  <!-- WhatsApp Button -->
-  <a href="https://wa.me/918851621454?text=Hi%20i%20have%20seen%20your%20website%2C%20need%20more%20info" class="whatsapp-btn" target="_blank">
-    <i class="fab fa-whatsapp"></i>
+  <!-- Mobile-First: Sticky WhatsApp & Call CTA Buttons (Mobile Only) -->
+  <div class="mobile-cta-buttons" role="complementary" aria-label="Contact actions">
+    <a href="https://wa.me/918851621454?text=Hi%20i%20have%20seen%20your%20website%2C%20need%20more%20info" class="btn contact-whatsapp btn-icon" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+      <span>WhatsApp</span>
+    </a>
+    <a href="tel:+918851621454" class="btn btn-accent btn-icon" aria-label="Call us at +91 88516 21454">
+      <i class="fas fa-phone" aria-hidden="true"></i>
+      <span>Call</span>
+    </a>
+  </div>
+
+  <!-- Desktop: Floating WhatsApp Button -->
+  <a href="https://wa.me/918851621454?text=Hi%20i%20have%20seen%20your%20website%2C%20need%20more%20info" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
     <span class="whatsapp-tooltip">Chat with us!</span>
   </a>
 
-  <!-- Back to Top Button -->
-  <a href="#home" class="back-to-top">
-    <i class="fas fa-chevron-up"></i>
+  <!-- Desktop: Floating Call Button -->
+  <a href="tel:+918851621454" class="call-btn" aria-label="Call us at +91 88516 21454">
+    <i class="fas fa-phone" aria-hidden="true"></i>
   </a>
 
-  <!-- JavaScript Libraries -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- Back to Top Button -->
+  <a href="#home" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+  </a>
+
+  <!-- JavaScript Libraries: Load asynchronously for better performance -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+  
+  <!-- Load CSS asynchronously fallback script -->
+  <script>
+    /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+    (function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+    var loadCSS=function(href,before,media){var doc=w.document;var ss=doc.createElement("link");var ref;if(before){ref=before}else{var refs=(doc.body||doc.getElementsByTagName("head")[0]).childNodes;ref=refs[refs.length-1]}var sheets=doc.styleSheets;ss.rel="stylesheet";ss.href=href;ss.media="only x";function ready(cb){if(doc.body){return cb()}setTimeout(function(){ready(cb)})}ready(function(){ref.parentNode.insertBefore(ss,before?ref:ref.nextSibling)});var onloadcssdefined=function(cb){var resolvedHref=ss.href;var i=sheets.length;while(i--){if(sheets[i].href===resolvedHref){return cb()}}setTimeout(function(){onloadcssdefined(cb)})};ss.onloadcssdefined=onloadcssdefined;onloadcssdefined(function(){if(ss.media!=="all"){ss.media=media||"all"}});return ss};
+    w.loadCSS=loadCSS})(typeof global!=="undefined"?global:this);
+  </script>
 
   <script>
     // Initialize AOS (Animate on Scroll)
@@ -1755,8 +2009,9 @@
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.querySelector('.nav-links');
     hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
+      const isActive = hamburger.classList.toggle('active');
       navLinks.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', isActive);
     });
   
     // Close mobile menu when clicking a nav link
@@ -1794,6 +2049,10 @@
       const img = document.createElement('img');
       img.src = `pics/image${index}.jpeg`;
       img.alt = `Gallery Image ${index}`;
+      img.width = 700;
+      img.height = 700;
+      img.loading = 'lazy';
+      img.decoding = 'async';
 
       galleryItem.appendChild(img);
       return galleryItem;

@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#e0a83a" />
+  <title id="page-title">Loading...</title>
+  
+  <!-- SEO Meta Tags - Will be populated dynamically -->
+  <meta name="description" id="meta-description" content="Loading..." />
+  <meta name="keywords" id="meta-keywords" content="" />
+  <meta name="author" content="ANNO Interior" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph Meta Tags - Will be populated dynamically -->
+  <meta property="og:title" id="og-title" content="Loading..." />
+  <meta property="og:description" id="og-description" content="Loading..." />
+  <meta property="og:image" id="og-image" content="" />
+  <meta property="og:url" id="og-url" content="" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Twitter Card Meta Tags - Will be populated dynamically -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" id="twitter-title" content="Loading..." />
+  <meta name="twitter:description" id="twitter-description" content="Loading..." />
+  <meta name="twitter:image" id="twitter-image" content="" />
+  
+  <!-- Canonical URL - Will be populated dynamically -->
+  <link rel="canonical" id="canonical-url" href="" />
+  
+  <!-- Performance: Preconnect to external domains -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://images.unsplash.com">
+  
+  <!-- Performance: Load Google Fonts with display=swap for better performance -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"></noscript>
+  
+  <!-- Structured Data - Will be populated dynamically -->
+  <script type="application/ld+json" id="structured-data-interior-designer">
+    {}
+  </script>
+  
+  <!-- FAQ Schema - Will be populated dynamically -->
+  <script type="application/ld+json" id="structured-data-faq">
+    {}
+  </script>
+  
+  <!-- Performance: Load non-critical CSS asynchronously -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+  
+  <style>
+    /* Global Styles - Same as city-map.html template */
+    :root {
+      --primary-color: #212121;
+      --accent-color: #e0a83a;
+      --accent-hover: #c39128;
+      --light-color: #f9f9f9;
+      --dark-color: #111;
+      --font-main: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+      --font-accent: 'Playfair Display', Georgia, serif;
+      --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      --border-radius: 12px;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    body {
+      font-family: var(--font-main);
+      line-height: 1.8;
+      color: var(--primary-color);
+      background-color: var(--light-color);
+      overflow-x: hidden;
+      padding-bottom: 80px;
+    }
+    @media (min-width: 992px) {
+      body {
+        padding-bottom: 0;
+      }
+    }
+    h1, h2, h3, h4 {
+      font-family: var(--font-accent);
+      margin-bottom: 1.2rem;
+      color: var(--dark-color);
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    h1 { font-size: 2.3rem; letter-spacing: -0.5px; }
+    h2 { font-size: 2rem; letter-spacing: -0.3px; }
+    h3 { font-size: 1.5rem; }
+    p {
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+    ul {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    ul li {
+      margin-bottom: 0.8rem;
+      line-height: 1.8;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+    a:focus-visible {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    .container {
+      width: 95%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .section {
+      padding: 4rem 0;
+      position: relative;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 90px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+      margin: 1.2rem auto 0;
+    }
+    .btn {
+      display: inline-block;
+      min-height: 48px;
+      min-width: 48px;
+      padding: 0.9rem 2rem;
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: var(--transition);
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      box-shadow: 0 5px 15px rgba(224, 168, 58, 0.3);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      -webkit-tap-highlight-color: rgba(224, 168, 58, 0.3);
+      touch-action: manipulation;
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+    }
+    .btn:focus-visible {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 2px;
+    }
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.15);
+      transition: var(--transition);
+      z-index: -1;
+    }
+    .btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(224, 168, 58, 0.4);
+    }
+    .btn:hover::before {
+      width: 100%;
+    }
+    .btn-outline {
+      background-color: transparent;
+      box-shadow: none;
+      border: 2px solid var(--accent-color);
+      color: var(--accent-color);
+    }
+    .btn-outline:hover {
+      background-color: var(--accent-color);
+      color: white;
+    }
+    .btn-accent {
+      background-color: var(--accent-color);
+      color: white;
+    }
+    .btn-large {
+      min-height: 52px;
+      padding: 1.1rem 2.5rem;
+      font-size: 1rem;
+    }
+    .btn-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .btn-icon i {
+      font-size: 1.1rem;
+    }
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--accent-color);
+      color: white;
+      padding: 8px 16px;
+      text-decoration: none;
+      z-index: 10000;
+      border-radius: 0 0 4px 0;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+    header {
+      background-color: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 0;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--dark-color);
+      font-family: var(--font-accent);
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+    }
+    .logo-icon {
+      color: var(--accent-color);
+      margin-right: 0.5rem;
+      font-size: 1.8rem;
+    }
+    .logo span { color: var(--accent-color); }
+    .nav-links {
+      display: none;
+      list-style: none;
+    }
+    .nav-links li { margin-left: 2.5rem; }
+    .nav-links a {
+      position: relative;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: var(--transition);
+      padding: 0.3rem 0;
+      font-size: 0.95rem;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent-color);
+      transition: var(--transition);
+      opacity: 0;
+    }
+    .nav-links a:hover {
+      color: var(--accent-color);
+    }
+    .nav-links a:hover::after {
+      width: 100%;
+      opacity: 1;
+    }
+    .hamburger {
+      cursor: pointer;
+      font-size: 1.5rem;
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      min-height: 48px;
+      position: relative;
+      z-index: 1010;
+      padding: 12px;
+      background: transparent;
+      border: none;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+      touch-action: manipulation;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+    }
+    .hamburger:focus-visible {
+      outline: 2px solid var(--accent-color);
+      outline-offset: 2px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: var(--dark-color);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: var(--transition);
+    }
+    .hamburger span:nth-child(1) { top: 14px; }
+    .hamburger span:nth-child(2) { top: 23px; }
+    .hamburger span:nth-child(3) { top: 32px; }
+    .hamburger.active span:nth-child(1) {
+      transform: translateX(-50%) rotate(45deg);
+      top: 23px;
+    }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) {
+      transform: translateX(-50%) rotate(-45deg);
+      top: 23px;
+    }
+    footer {
+      background-color: #1a1a1a;
+      color: #f5f5f5;
+      position: relative;
+    }
+    .footer-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80')
+                  no-repeat center center/cover;
+      opacity: 0.03;
+      z-index: 0;
+    }
+    .footer-main {
+      padding: 5rem 0 3rem;
+      position: relative;
+      z-index: 1;
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 3rem;
+    }
+    .footer-column {
+      flex: 1;
+      min-width: 250px;
+    }
+    .footer-column h3 {
+      color: var(--accent-color);
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 0.8rem;
+    }
+    .footer-column h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 2px;
+      background-color: var(--accent-color);
+    }
+    .footer-about p {
+      color: #ccc;
+      line-height: 1.8;
+    }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 1rem; }
+    .footer-links a {
+      color: #ccc;
+      transition: var(--transition);
+      padding: 0.5rem 0;
+      display: flex;
+      align-items: center;
+    }
+    .footer-links a:hover {
+      color: var(--accent-color);
+      transform: translateX(5px);
+    }
+    .footer-links a i {
+      color: var(--accent-color);
+      margin-right: 0.8rem;
+      font-size: 0.9rem;
+    }
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .social-link {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      min-height: 48px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: var(--transition);
+      color: var(--accent-color);
+      -webkit-tap-highlight-color: rgba(224, 168, 58, 0.3);
+      touch-action: manipulation;
+    }
+    .social-link:hover {
+      background-color: var(--accent-color);
+      color: white;
+      transform: translateY(-5px);
+    }
+    .copyright {
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 3rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: #999;
+    }
+    .mobile-cta-buttons {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      gap: 0.5rem;
+      padding: 0.75rem;
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+      z-index: 999;
+      backdrop-filter: blur(10px);
+    }
+    .mobile-cta-buttons .btn {
+      flex: 1;
+      min-height: 52px;
+      padding: 0.9rem 1rem;
+      font-size: 0.9rem;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .mobile-cta-buttons .btn i {
+      font-size: 1.2rem;
+    }
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      width: 60px;
+      height: 60px;
+      min-width: 60px;
+      min-height: 60px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.8rem;
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+      transition: var(--transition);
+      z-index: 100;
+      -webkit-tap-highlight-color: rgba(37, 211, 102, 0.3);
+      touch-action: manipulation;
+    }
+    .whatsapp-btn:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(37, 211, 102, 0.45);
+    }
+    .whatsapp-tooltip {
+      position: absolute;
+      left: 75px;
+      background-color: white;
+      color: #333;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s;
+      opacity: 0;
+      visibility: hidden;
+      white-space: nowrap;
+    }
+    .whatsapp-tooltip::before {
+      content: '';
+      position: absolute;
+      left: -8px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-width: 8px 8px 8px 0;
+      border-style: solid;
+      border-color: transparent white transparent transparent;
+    }
+    .whatsapp-btn:hover .whatsapp-tooltip {
+      opacity: 1;
+      visibility: visible;
+      left: 70px;
+    }
+    .call-btn {
+      position: fixed;
+      bottom: 30px;
+      left: 100px;
+      width: 60px;
+      height: 60px;
+      min-width: 60px;
+      min-height: 60px;
+      background-color: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      box-shadow: 0 8px 25px rgba(224, 168, 58, 0.35);
+      transition: var(--transition);
+      z-index: 100;
+      -webkit-tap-highlight-color: rgba(224, 168, 58, 0.3);
+      touch-action: manipulation;
+    }
+    .call-btn:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(224, 168, 58, 0.45);
+    }
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      min-width: 50px;
+      min-height: 50px;
+      background-color: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      box-shadow: 0 8px 25px rgba(224, 168, 58, 0.3);
+      transition: var(--transition);
+      z-index: 100;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-tap-highlight-color: rgba(224, 168, 58, 0.3);
+      touch-action: manipulation;
+    }
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .back-to-top:hover {
+      transform: translateY(-8px);
+      background-color: var(--accent-hover);
+    }
+    .contact-whatsapp {
+      background-color: #25d366;
+      color: white;
+    }
+    .contact-whatsapp:hover {
+      background-color: #128c7e;
+      color: white;
+    }
+    
+    /* Content Styles */
+    .content-section {
+      padding: 2rem 0;
+    }
+    .content-section h2 {
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    .content-section h3 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: var(--dark-color);
+    }
+    .content-image-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+    .content-image-wrapper .content-text {
+      flex: 1;
+      min-width: 300px;
+    }
+    .content-image-wrapper .content-image {
+      flex: 1;
+      min-width: 300px;
+      margin: 0;
+    }
+    .content-image {
+      width: 100%;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      margin: 2rem 0;
+      transition: var(--transition);
+    }
+    .content-image:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
+    .faq-item {
+      background: white;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    .faq-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+    .faq-question {
+      font-weight: 600;
+      color: var(--dark-color);
+      margin-bottom: 0.8rem;
+      font-size: 1.1rem;
+      font-family: var(--font-accent);
+    }
+    .faq-answer {
+      color: #555;
+      line-height: 1.8;
+    }
+    .areas-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .area-item {
+      background: white;
+      padding: 1.5rem;
+      border-radius: var(--border-radius);
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      font-weight: 500;
+      color: var(--dark-color);
+    }
+    .area-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
+      color: white;
+    }
+    .soft-cta {
+      background: linear-gradient(135deg, rgba(224, 168, 58, 0.1), rgba(224, 168, 58, 0.05));
+      padding: 2.5rem;
+      border-radius: var(--border-radius);
+      text-align: center;
+      margin-top: 3rem;
+      border: 2px solid var(--accent-color);
+      box-shadow: var(--shadow);
+    }
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .image-grid-item {
+      position: relative;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      aspect-ratio: 4/3;
+      transition: var(--transition);
+    }
+    .image-grid-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+    .image-grid-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
+    .image-grid-item:hover img {
+      transform: scale(1.1);
+    }
+    .loading {
+      text-align: center;
+      padding: 3rem;
+      color: #666;
+    }
+    .loading i {
+      font-size: 2rem;
+      color: var(--accent-color);
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .error-message {
+      background: #fee;
+      color: #c33;
+      padding: 1.5rem;
+      border-radius: var(--border-radius);
+      text-align: center;
+      margin: 2rem 0;
+      border: 2px solid #fcc;
+    }
+    
+    /* Mobile-First Responsive */
+    .navbar { position: relative; }
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transform: translateY(-150%);
+      transition: var(--transition);
+      opacity: 0;
+      visibility: hidden;
+      z-index: -1;
+    }
+    .nav-links.active {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+      z-index: 1;
+    }
+    .nav-links li { margin: 1rem 0; }
+    .hamburger { display: flex; }
+    .mobile-cta-buttons { display: flex; }
+    .whatsapp-btn { display: none; }
+    .call-btn { display: none; }
+    .back-to-top {
+      bottom: 100px;
+      right: 20px;
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      min-height: 48px;
+      font-size: 1rem;
+    }
+    
+    @media (min-width: 768px) {
+      h1 { font-size: 2.8rem; }
+      h2 { font-size: 2.2rem; }
+      h3 { font-size: 1.6rem; }
+      .container { width: 90%; }
+      .section { padding: 5rem 0; }
+      .back-to-top { bottom: 30px; right: 30px; width: 50px; height: 50px; min-width: 50px; min-height: 50px; font-size: 1.2rem; }
+      .footer-content { flex-direction: row; }
+      .footer-column { text-align: left; }
+      .footer-column h3::after { left: 0; transform: none; }
+      .social-links { justify-content: flex-start; }
+      .footer-links a { justify-content: flex-start; }
+    }
+    
+    @media (min-width: 992px) {
+      h1 { font-size: 3.2rem; letter-spacing: -0.5px; }
+      h2 { font-size: 2.4rem; letter-spacing: -0.3px; }
+      h3 { font-size: 1.8rem; }
+      .container { width: 90%; max-width: 1280px; }
+      .section { padding: 6rem 0; }
+      .mobile-cta-buttons { display: none; }
+      .whatsapp-btn { display: flex; }
+      .call-btn { display: flex; }
+      .back-to-top { bottom: 30px; right: 30px; width: 50px; height: 50px; min-width: 50px; min-height: 50px; font-size: 1.2rem; }
+      .hamburger { display: none; }
+      .nav-links {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        padding: 0;
+        background-color: transparent;
+        z-index: 1;
+        width: auto;
+        left: auto;
+        top: auto;
+      }
+      .nav-links li { margin-left: 2.5rem; margin: 0 0 0 2.5rem; }
+    }
+    
+    @media (min-width: 1200px) {
+      h1 { font-size: 3.8rem; letter-spacing: -0.5px; }
+      h2 { font-size: 2.8rem; letter-spacing: -0.3px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Accessibility: Skip to main content link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Header -->
+  <header id="header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo"><i class="fas fa-home logo-icon"></i>ANNO <span>Interior</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#portfolio">Projects</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="city-map.html">Cities</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <section class="section" style="padding-top: 8rem;">
+      <div class="container">
+        <!-- Loading State -->
+        <div id="loading" class="loading">
+          <i class="fas fa-spinner"></i>
+          <p>Loading content...</p>
+        </div>
+        
+        <!-- Error State -->
+        <div id="error" class="error-message" style="display: none;">
+          <i class="fas fa-exclamation-triangle"></i>
+          <p>Unable to load city data. Please try again later.</p>
+        </div>
+        
+        <!-- Content Container - Will be populated dynamically -->
+        <div id="content-container" style="display: none;">
+          <!-- H1 -->
+          <h1 id="page-h1" style="text-align: center; margin-bottom: 2rem;"></h1>
+          
+          <!-- Introduction Section -->
+          <div id="introduction-section" class="content-section"></div>
+          
+          <!-- Main Content Sections -->
+          <div id="sections-container"></div>
+          
+          <!-- Areas Section -->
+          <div id="areas-section" class="content-section"></div>
+          
+          <!-- Gallery Section -->
+          <div id="gallery-section" class="content-section"></div>
+          
+          <!-- FAQs Section -->
+          <div id="faqs-section" class="content-section"></div>
+          
+          <!-- Internal Linking Section -->
+          <div class="content-section">
+            <h2>Related Services</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+              <a href="index.html#portfolio" class="btn btn-outline" style="text-align: center; padding: 1.5rem;">
+                <i class="fas fa-building"></i><br>Residential Interior Design
+              </a>
+              <a href="index.html#portfolio" class="btn btn-outline" style="text-align: center; padding: 1.5rem;">
+                <i class="fas fa-utensils"></i><br>Modular Kitchen Design
+              </a>
+              <a href="index.html#portfolio" class="btn btn-outline" style="text-align: center; padding: 1.5rem;">
+                <i class="fas fa-tools"></i><br>Turnkey Interior Solutions
+              </a>
+              <a href="index.html#portfolio" class="btn btn-outline" style="text-align: center; padding: 1.5rem;">
+                <i class="fas fa-images"></i><br>View Our Portfolio
+              </a>
+            </div>
+          </div>
+          
+          <!-- Soft CTA -->
+          <div id="cta-section" class="soft-cta"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-bg"></div>
+    <div class="footer-main container">
+      <div class="footer-content">
+        <div class="footer-column footer-about">
+          <h3>ANNO Interior</h3>
+          <p id="footer-description">Leading Interior Designer. Transform your living space with our premium interior design services. We create beautiful, functional spaces that reflect your personality and enhance your lifestyle.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/anno.interior.homes/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://wa.me/918851621454?text=Hi%20i%20have%20seen%20your%20website%2C%20need%20more%20info" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-angle-right"></i> Home</a></li>
+            <li><a href="index.html#about"><i class="fas fa-angle-right"></i> About</a></li>
+            <li><a href="index.html#portfolio"><i class="fas fa-angle-right"></i> Projects</a></li>
+            <li><a href="index.html#gallery"><i class="fas fa-angle-right"></i> Gallery</a></li>
+            <li><a href="index.html#pricing"><i class="fas fa-angle-right"></i> Pricing</a></li>
+            <li><a href="index.html#contact"><i class="fas fa-angle-right"></i> Contact</a></li>
+            <li><a href="city-map.html"><i class="fas fa-angle-right"></i> Cities</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Our Services</h3>
+          <ul class="footer-links">
+            <li><a href="index.html#portfolio"><i class="fas fa-angle-right"></i> Residential Interiors</a></li>
+            <li><a href="index.html#portfolio"><i class="fas fa-angle-right"></i> Modular Kitchen Design</a></li>
+            <li><a href="index.html#portfolio"><i class="fas fa-angle-right"></i> Turnkey Interiors</a></li>
+            <li><a href="index.html#portfolio"><i class="fas fa-angle-right"></i> Portfolio</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 ANNO Interior. All rights reserved. | Premium Interior Design Services</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile-First: Sticky WhatsApp & Call CTA Buttons (Mobile Only) -->
+  <div class="mobile-cta-buttons" role="complementary" aria-label="Contact actions">
+    <a href="#" id="mobile-whatsapp-link" class="btn contact-whatsapp btn-icon" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+      <span>WhatsApp</span>
+    </a>
+    <a href="tel:+918851621454" class="btn btn-accent btn-icon" aria-label="Call us at +91 88516 21454">
+      <i class="fas fa-phone" aria-hidden="true"></i>
+      <span>Call</span>
+    </a>
+  </div>
+
+  <!-- Desktop: Floating WhatsApp Button -->
+  <a href="#" id="desktop-whatsapp-link" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    <span class="whatsapp-tooltip">Chat with us!</span>
+  </a>
+
+  <!-- Desktop: Floating Call Button -->
+  <a href="tel:+918851621454" class="call-btn" aria-label="Call us at +91 88516 21454">
+    <i class="fas fa-phone" aria-hidden="true"></i>
+  </a>
+
+  <!-- Back to Top Button -->
+  <a href="#main-content" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+  </a>
+
+  <script>
+    // Get city slug from URL parameter or filename (for backward compatibility)
+    function getCitySlug() {
+      // First, try to get from URL parameter
+      const urlParams = new URLSearchParams(window.location.search);
+      const slugParam = urlParams.get('city');
+      if (slugParam) {
+        return slugParam;
+      }
+      
+      // Fallback: try to get from hash
+      const hash = window.location.hash.substring(1);
+      if (hash) {
+        return hash;
+      }
+      
+      // Last resort: extract from filename (for backward compatibility)
+      const path = window.location.pathname;
+      const filename = path.split('/').pop() || window.location.href.split('/').pop();
+      // Remove .html extension
+      return filename.replace('.html', '');
+    }
+
+    // Load and populate city data
+    async function loadCityData() {
+      const loadingEl = document.getElementById('loading');
+      const errorEl = document.getElementById('error');
+      const contentContainer = document.getElementById('content-container');
+      const citySlug = getCitySlug();
+      
+      try {
+        const response = await fetch('cities.json');
+        if (!response.ok) {
+          throw new Error('Failed to load cities data');
+        }
+        
+        const data = await response.json();
+        const city = data.cities.find(c => c.slug === citySlug);
+        
+        if (!city) {
+          throw new Error('City not found');
+        }
+        
+        // Populate meta tags
+        document.getElementById('page-title').textContent = city.title;
+        document.getElementById('meta-description').setAttribute('content', city.metaDescription);
+        document.getElementById('meta-keywords').setAttribute('content', city.metaKeywords || '');
+        document.getElementById('canonical-url').setAttribute('href', city.canonicalUrl);
+        
+        // OG tags
+        document.getElementById('og-title').setAttribute('content', city.title);
+        document.getElementById('og-description').setAttribute('content', city.metaDescription);
+        document.getElementById('og-image').setAttribute('content', city.ogImage);
+        document.getElementById('og-url').setAttribute('content', city.canonicalUrl);
+        
+        // Twitter tags
+        document.getElementById('twitter-title').setAttribute('content', city.title);
+        document.getElementById('twitter-description').setAttribute('content', city.metaDescription);
+        document.getElementById('twitter-image').setAttribute('content', city.ogImage);
+        
+        // Structured Data - InteriorDesigner
+        const interiorDesignerSchema = {
+          "@context": "https://schema.org",
+          "@type": "InteriorDesigner",
+          "name": "ANNO Interior",
+          "image": city.ogImage,
+          "description": city.metaDescription,
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": city.name,
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "28.6139",
+            "longitude": "77.2090"
+          },
+          "url": city.canonicalUrl,
+          "telephone": "+918851621454",
+          "priceRange": "₹₹",
+          "areaServed": {
+            "@type": "City",
+            "name": city.name
+          },
+          "sameAs": [
+            "https://www.instagram.com/anno.interior.homes/"
+          ]
+        };
+        document.getElementById('structured-data-interior-designer').textContent = JSON.stringify(interiorDesignerSchema);
+        
+        // FAQ Schema
+        if (city.faqs && city.faqs.length > 0) {
+          const faqSchema = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": city.faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          };
+          document.getElementById('structured-data-faq').textContent = JSON.stringify(faqSchema);
+        }
+        
+        // Populate H1
+        document.getElementById('page-h1').textContent = city.h1;
+        
+        // Populate Introduction
+        const introSection = document.getElementById('introduction-section');
+        introSection.innerHTML = `
+          <div class="content-image-wrapper">
+            <div class="content-text">
+              <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem;">
+                ${city.introduction.paragraph1}
+              </p>
+              <p style="font-size: 1.15rem; line-height: 1.9;">
+                ${city.introduction.paragraph2}
+              </p>
+            </div>
+            <img src="${city.introduction.image}" alt="${city.introduction.imageAlt}" class="content-image" width="600" height="400" loading="lazy" decoding="async">
+          </div>
+        `;
+        
+        // Populate Sections
+        const sectionsContainer = document.getElementById('sections-container');
+        sectionsContainer.innerHTML = city.sections.map(section => {
+          let html = `<div class="content-section">`;
+          html += `<h2>${section.h2}</h2>`;
+          
+          if (section.intro) {
+            html += `<p>${section.intro}</p>`;
+          }
+          
+          if (section.content) {
+            html += `<p>${section.content}</p>`;
+          }
+          
+          if (section.subsections && section.subsections.length > 0) {
+            section.subsections.forEach(subsection => {
+              html += `<h3>${subsection.h3}</h3>`;
+              
+              if (subsection.content) {
+                html += `<p>${subsection.content}</p>`;
+              }
+              
+              if (subsection.listItems && subsection.listItems.length > 0) {
+                html += `<ul>`;
+                subsection.listItems.forEach(item => {
+                  // Check if item contains colon for bold formatting
+                  if (item.includes(':')) {
+                    const [bold, rest] = item.split(':');
+                    html += `<li><strong>${bold}:</strong>${rest}</li>`;
+                  } else {
+                    html += `<li>${item}</li>`;
+                  }
+                });
+                html += `</ul>`;
+              }
+              
+              if (subsection.contentAfter) {
+                html += `<p>${subsection.contentAfter}</p>`;
+              }
+              
+              if (subsection.image) {
+                const imageWrapper = subsection.imagePosition === 'left' 
+                  ? `<div class="content-image-wrapper" style="flex-direction: row-reverse;">`
+                  : `<div class="content-image-wrapper">`;
+                html += imageWrapper;
+                html += `<div class="content-text"></div>`;
+                html += `<img src="${subsection.image}" alt="${subsection.imageAlt || ''}" class="content-image" width="500" height="400" loading="lazy" decoding="async">`;
+                html += `</div>`;
+              }
+            });
+          }
+          
+          if (section.listItems && section.listItems.length > 0) {
+            html += `<ul>`;
+            section.listItems.forEach(item => {
+              if (item.includes(':')) {
+                const [bold, rest] = item.split(':');
+                html += `<li><strong>${bold}:</strong>${rest}</li>`;
+              } else {
+                html += `<li>${item}</li>`;
+              }
+            });
+            html += `</ul>`;
+          }
+          
+          if (section.contentAfter) {
+            html += `<p>${section.contentAfter}</p>`;
+          }
+          
+          html += `</div>`;
+          return html;
+        }).join('');
+        
+        // Populate Areas Section
+        if (city.areas && city.areas.length > 0) {
+          const areasSection = document.getElementById('areas-section');
+          areasSection.innerHTML = `
+            <h2>Areas We Serve Across ${city.name}</h2>
+            <p>ANNO Interior works across major residential zones, including:</p>
+            <div class="areas-list">
+              ${city.areas.map(area => `<div class="area-item">${area}</div>`).join('')}
+            </div>
+            <p style="margin-top: 1.5rem;">Projects are handled with local site understanding and coordination. We understand the specific requirements, approvals, and constraints of each area to ensure smooth project execution.</p>
+          `;
+        }
+        
+        // Populate Gallery
+        if (city.galleryImages && city.galleryImages.length > 0) {
+          const gallerySection = document.getElementById('gallery-section');
+          gallerySection.innerHTML = `
+            <div style="margin-top: 3rem;">
+              <h3 style="text-align: center; margin-bottom: 2rem; color: var(--dark-color);">Our ${city.name} Projects</h3>
+              <div class="image-grid">
+                ${city.galleryImages.map(img => `
+                  <div class="image-grid-item">
+                    <img src="${img.src}" alt="${img.alt}" width="400" height="300" loading="lazy" decoding="async">
+                  </div>
+                `).join('')}
+              </div>
+              <div style="text-align: center; margin-top: 2rem;">
+                <a href="index.html#portfolio" class="btn btn-accent btn-large btn-icon">
+                  <i class="fas fa-images"></i> View Full Portfolio
+                </a>
+              </div>
+            </div>
+          `;
+        }
+        
+        // Populate FAQs
+        if (city.faqs && city.faqs.length > 0) {
+          const faqsSection = document.getElementById('faqs-section');
+          faqsSection.innerHTML = `
+            <h2>FAQs – Interior Design in ${city.name}</h2>
+            ${city.faqs.map(faq => `
+              <div class="faq-item">
+                <div class="faq-question">${faq.question}</div>
+                <div class="faq-answer">${faq.answer}</div>
+              </div>
+            `).join('')}
+          `;
+        }
+        
+        // Populate CTA
+        if (city.cta) {
+          const ctaSection = document.getElementById('cta-section');
+          const whatsappMessage = encodeURIComponent(`Hi, I'm interested in interior design services in ${city.name}`);
+          ctaSection.innerHTML = `
+            <h3 style="margin-top: 0; color: var(--dark-color);">${city.cta.heading}</h3>
+            <p style="margin-bottom: 1.5rem;">${city.cta.paragraph1}</p>
+            <p style="margin-bottom: 1.5rem;">${city.cta.paragraph2}</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+              <a href="https://wa.me/918851621454?text=${whatsappMessage}" class="btn btn-large contact-whatsapp btn-icon" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+              </a>
+              <a href="index.html#contact" class="btn btn-large btn-accent btn-icon">
+                <i class="fas fa-calendar"></i> Book Site Visit
+              </a>
+            </div>
+          `;
+          
+          // Update WhatsApp links
+          document.getElementById('mobile-whatsapp-link').href = `https://wa.me/918851621454?text=${whatsappMessage}`;
+          document.getElementById('desktop-whatsapp-link').href = `https://wa.me/918851621454?text=${whatsappMessage}`;
+        }
+        
+        // Update footer description
+        document.getElementById('footer-description').textContent = `Leading Interior Designer in ${city.name}. Transform your living space with our premium interior design services. We create beautiful, functional spaces that reflect your personality and enhance your lifestyle.`;
+        
+        // Hide loading, show content
+        loadingEl.style.display = 'none';
+        contentContainer.style.display = 'block';
+        
+      } catch (error) {
+        console.error('Error loading city data:', error);
+        loadingEl.style.display = 'none';
+        errorEl.style.display = 'block';
+      }
+    }
+    
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        const isActive = hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        hamburger.setAttribute('aria-expanded', isActive);
+      });
+    }
+    
+    // Close mobile menu when clicking a nav link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (hamburger && navLinks) {
+          hamburger.classList.remove('active');
+          navLinks.classList.remove('active');
+          hamburger.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+    
+    // Back-to-top button functionality
+    const backToTop = document.querySelector('.back-to-top');
+    if (backToTop) {
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          backToTop.classList.add('active');
+        } else {
+          backToTop.classList.remove('active');
+        }
+      });
+    }
+    
+    // Load city data when page loads
+    document.addEventListener('DOMContentLoaded', loadCityData);
+  </script>
+</body>
+</html>
